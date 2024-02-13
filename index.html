@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpha Clash</title>
+    <!-- Daisy UI and Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy UI and Tailwind -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fonts -->
+    <!-- Shared Styles -->
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+      .home {
+        background-image: url(./images/background.png);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+    <!-- Shared Styles -->
+  </head>
+  <body>
+    <header></header>
+    <main class="bg-[#010313] min-h-screen home">
+      <!-- Home Starts here -->
+      <section
+        class="container mx-auto max-w-screen-xl font-poppins min-h-screen flex flex-col items-center justify-center " id="home-screen"
+      >
+        <div>
+          <h1
+            class="font-extrabold text-2xl text-white md:text-8xl text-center"
+          >
+            ALPHABET CLASH
+          </h1>
+          <p class="text-center text-white py-3 md:py-6">
+            Unleash Your Keyboard Kung Fu : Press “Enter” to Play
+          </p>
+          <button onclick="play()" class="btn bg-white text-black block mx-auto">
+            Play Now
+          </button>
+        </div>
+      </section>
+      <!-- Home ends here -->
+      <section class="container mx-auto max-w-screen-xl hidden" id="playground">
+        <!-- Playground container -->
+        <div class="py-10">
+          <!-- screen -->
+          <div
+            class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3] block mx-auto"
+          >
+            <div class="flex justify-center">
+              <p
+                class="bg-[#2F2941] py-3 px-6 rounded-b-xl font-inter text-white"
+              >
+                Don't watch keyboard while playing...
+              </p>
+            </div>
+            <div class="relative md:top-1/4">
+              <p class="text-center text-7xl text-black font-semibold font-poppins " id="display-value">Start</p>
+            </div>
+          </div>
+          <!-- screen -->
+          <!-- keyboard starts here-->
+          <div class="py-10 ">
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="q"  class="kbd">q</kbd>
+              <kbd id="w"  class="kbd">w</kbd>
+              <kbd id="e"  class="kbd">e</kbd>
+              <kbd id="r"  class="kbd">r</kbd>
+              <kbd id="t"  class="kbd">t</kbd>
+              <kbd id="y"  class="kbd">y</kbd>
+              <kbd id="u"  class="kbd">u</kbd>
+              <kbd id="i"  class="kbd">i</kbd>
+              <kbd id="o"  class="kbd">o</kbd>
+              <kbd id="p"  class="kbd">p</kbd>
+            </div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="a" class="kbd">a</kbd>
+              <kbd id="s" class="kbd">s</kbd>
+              <kbd id="d" class="kbd">d</kbd>
+              <kbd id="f" class="kbd">f</kbd>
+              <kbd id="g" class="kbd">g</kbd>
+              <kbd id="h" class="kbd">h</kbd>
+              <kbd id="j" class="kbd">j</kbd>
+              <kbd id="k" class="kbd">k</kbd>
+              <kbd id="l" class="kbd">l</kbd>
+            </div>
+            <div class="flex justify-center gap-1 my-1 w-full">
+              <kbd id="z" class="kbd">z</kbd>
+              <kbd id="x" class="kbd">x</kbd>
+              <kbd id="c" class="kbd">c</kbd>
+              <kbd id="v" class="kbd">v</kbd>
+              <kbd id="b" class="kbd">b</kbd>
+              <kbd id="n" class="kbd">n</kbd>
+              <kbd id="m" class="kbd">m</kbd>
+              <kbd id="/" class="kbd">/</kbd>
+            </div>
+          </div>
+          <!-- keyboard ends here-->
+          <!-- live score -->
+          <div class="flex justify-between rounded-full pt-10 ">
+            <button
+              class="btn font-inter px-4 bg-[#894189] border-none outline-none text-white font-semibold rounded-full"
+            >
+              Life
+              <img src="./images/Group23.svg" alt="" />
+              <span>1</span>
+            </button>
+            <button
+              class="btn font-inter px-4 bg-[#360490] border-none outline-none text-white font-semibold rounded-full"
+            >
+              Score
+              <img src="./images/monetization_on.svg" alt="" />
+              <span>1</span>
+            </button>
+          </div>
+          <!-- live score -->
+        </div>
+        <!-- Playground container -->
+      </section>
+      <!-- Final Score Starts here -->
+      <section class="flex justify-center items-center flex-col min-h-screen hidden">
+        <div class="text-white  bg-[#FFFFFF33] p-10 rounded-lg shadow-xl">
+            <h1 class="text-5xl text-center">
+                <span class="font-extrabold">Score: </span>
+                <span>14</span>
+            </h1>
+            <button class="btn border-none outline-none bg-white text-black font-bold my-6 mx-auto block">Play Again</button>
+            <p class="font-medium text-center">Practice will make you pro</p>
+
+        </div>
+      </section>
+      <!-- Final Score ends here -->
+    </main>
+    <footer></footer>
+    <!-- Javascript Files -->
+    <script src="./scripts/utility.js"></script>
+    <script src="./scripts/alpha-class.js"></script>
+    <!-- Javascript Files -->
+  </body>
+</html>
