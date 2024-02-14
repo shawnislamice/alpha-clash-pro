@@ -41,7 +41,8 @@
     <main class="bg-[#010313] min-h-screen home">
       <!-- Home Starts here -->
       <section
-        class="container mx-auto max-w-screen-xl font-poppins min-h-screen flex flex-col items-center justify-center " id="home-screen"
+        class="container mx-auto max-w-screen-xl font-poppins min-h-screen flex flex-col items-center justify-center"
+        id="home-screen"
       >
         <div>
           <h1
@@ -52,7 +53,10 @@
           <p class="text-center text-white py-3 md:py-6">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
-          <button onclick="play()" class="btn bg-white text-black block mx-auto">
+          <button
+            onclick="play()"
+            class="btn bg-white text-black block mx-auto"
+          >
             Play Now
           </button>
         </div>
@@ -73,23 +77,28 @@
               </p>
             </div>
             <div class="relative md:top-1/4">
-              <p class="text-center text-7xl text-black font-semibold font-poppins " id="display-value">Start</p>
+              <p
+                class="text-center text-7xl text-black font-semibold font-poppins"
+                id="display-value"
+              >
+                Start
+              </p>
             </div>
           </div>
           <!-- screen -->
           <!-- keyboard starts here-->
-          <div class="py-10 ">
+          <div class="py-10">
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd id="q"  class="kbd">q</kbd>
-              <kbd id="w"  class="kbd">w</kbd>
-              <kbd id="e"  class="kbd">e</kbd>
-              <kbd id="r"  class="kbd">r</kbd>
-              <kbd id="t"  class="kbd">t</kbd>
-              <kbd id="y"  class="kbd">y</kbd>
-              <kbd id="u"  class="kbd">u</kbd>
-              <kbd id="i"  class="kbd">i</kbd>
-              <kbd id="o"  class="kbd">o</kbd>
-              <kbd id="p"  class="kbd">p</kbd>
+              <kbd id="q" class="kbd">q</kbd>
+              <kbd id="w" class="kbd">w</kbd>
+              <kbd id="e" class="kbd">e</kbd>
+              <kbd id="r" class="kbd">r</kbd>
+              <kbd id="t" class="kbd">t</kbd>
+              <kbd id="y" class="kbd">y</kbd>
+              <kbd id="u" class="kbd">u</kbd>
+              <kbd id="i" class="kbd">i</kbd>
+              <kbd id="o" class="kbd">o</kbd>
+              <kbd id="p" class="kbd">p</kbd>
             </div>
             <div class="flex justify-center gap-1 my-1 w-full">
               <kbd id="a" class="kbd">a</kbd>
@@ -115,20 +124,20 @@
           </div>
           <!-- keyboard ends here-->
           <!-- live score -->
-          <div class="flex justify-between rounded-full pt-10 ">
+          <div class="flex justify-between rounded-full pt-10">
             <button
               class="btn font-inter px-4 bg-[#894189] border-none outline-none text-white font-semibold rounded-full"
             >
               Life
               <img src="./images/Group23.svg" alt="" />
-              <span>1</span>
+              <span id="life-score">5</span>
             </button>
             <button
               class="btn font-inter px-4 bg-[#360490] border-none outline-none text-white font-semibold rounded-full"
             >
               Score
               <img src="./images/monetization_on.svg" alt="" />
-              <span>1</span>
+              <span id="current-score">0</span>
             </button>
           </div>
           <!-- live score -->
@@ -136,15 +145,21 @@
         <!-- Playground container -->
       </section>
       <!-- Final Score Starts here -->
-      <section class="flex justify-center items-center flex-col min-h-screen hidden">
-        <div class="text-white  bg-[#FFFFFF33] p-10 rounded-lg shadow-xl">
-            <h1 class="text-5xl text-center">
-                <span class="font-extrabold">Score: </span>
-                <span>14</span>
-            </h1>
-            <button class="btn border-none outline-none bg-white text-black font-bold my-6 mx-auto block">Play Again</button>
-            <p class="font-medium text-center">Practice will make you pro</p>
-
+      <section
+        class="flex justify-center items-center flex-col min-h-screen hidden"
+      id="final-score">
+        <div class="text-white bg-[#FFFFFF33] p-10 rounded-lg shadow-xl">
+          <h4 class="text-3xl text-center">Game Over !</h4>
+          <h1 class="text-5xl text-center">
+            <span class="font-extrabold">Score: </span>
+            <span id="game-score">0</span>
+          </h1>
+          <button
+            class="btn border-none outline-none bg-white text-black font-bold my-6 mx-auto block"
+          id="play-again">
+            Play Again
+          </button>
+          <p class="font-medium text-center">Practice will make you pro</p>
         </div>
       </section>
       <!-- Final Score ends here -->
